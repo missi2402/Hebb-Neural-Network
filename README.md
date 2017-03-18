@@ -29,7 +29,17 @@ There is also a class for storing input and output data:
 <b>When initializing:</b> determine the size of the letter, create a two-dimensional array with weights:
 <pre>weight = [new Array (NUMBER_OF_INPUTS), new Array (NUMBER_OF_INPUTS)];</pre>
 Array letters are filled in: <i>if (the checkbox is checked) = 1, else = -1</i>.
+
 <b>When training:</b> zero weights, then for each object receive a training output using the function <pre>countOutput</pre>, if the expected result (-1-1) doesn't coincide with the received result (-11), then the weights are recalculated.
 Only when all objects are successfully recognized the training will end. The maximum possible <b>15 repetitions</b>, otherwise these letters can not be recognized.
+
 <b>When recognition:</b> On the input we get the fifth image, we consider its output, compare the output with the array <pre>initialOutput</pre> and highlight the letter.
 <h3>Example of work</h3>
+
+<h3>Recognition is not possible:</h3>
+
+![hebb2](https://cloud.githubusercontent.com/assets/16463279/24074333/3a32ecde-0c0f-11e7-968a-7385fffe9446.PNG)
+
+<h3>Success:</h3>
+
+![hebb1](https://cloud.githubusercontent.com/assets/16463279/24074334/3a4c2618-0c0f-11e7-9c0e-a4e7ca124ec6.PNG)
